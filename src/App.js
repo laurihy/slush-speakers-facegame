@@ -92,7 +92,7 @@ const AnswerCard = function(props) {
         <h1>{props.correct.name}</h1>
         <p>{props.correct.short_description}</p>
         {(props.correct.talks || []).map((talk) => {
-          return <p><strong>{talk.date}</strong> {talk.title}</p>
+          return <p key={props.correct.id + talk.date + talk.title}><strong>{talk.date}</strong> {talk.title}</p>
         })}
         <NextButton next={props.next}></NextButton>
       </div>
