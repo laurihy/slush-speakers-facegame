@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 const AnswerButton = function(props) {
   return (
-    <button className="ButtonContainer AnswerButton" onClick={() => {props.onAnswer(props.answerId)} }>
+    <button className="ButtonContainer AnswerButton" onClick={() => {props.onAnswer(props.answer)} }>
       <div className="ButtonInner AnswerButtonInner">
         <p>{props.answerName}</p>
       </div>
@@ -18,7 +18,8 @@ const Question = function(props){
         {props.answers.map(function(answer) {
           return <AnswerButton
             key={answer.id}
-            answerId={answer.id}
+            answerId={answer}
+            answer={answer}
             answerName={answer.name}
             onAnswer={props.onAnswer}
           ></AnswerButton>

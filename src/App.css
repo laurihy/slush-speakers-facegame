@@ -1,5 +1,5 @@
 .AppContainer {
-  background: #000;
+  background: #03061d;
   height: 100%;
   overflow: hidden;
 }
@@ -12,12 +12,12 @@
 }
 
 .PhotoContainer {
-  background: #000;
+  background: #03061d;
   flex: 1 0 auto;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  border: 0.2em solid #000;
+  border: 0.2em solid #03061d;
 }
 
 .AnswerContainer {
@@ -48,7 +48,7 @@
 
 .ButtonInner {
   color: #fff;
-  background: #000;
+  background: #03061d;
   margin: 0.3rem;
   min-height: 3rem;
   word-wrap: break-word;
@@ -72,7 +72,7 @@
 }
 
 .AnswerButtonInner {
-  color: #000;
+  color: #03061d;
   background: #fff;
 }
 
@@ -82,7 +82,7 @@
 
 .NextButtonInner {
   color: #fff;
-  background: #000;
+  background: #03061d;
 }
 
 .CardInner {
@@ -144,31 +144,35 @@
 }
 
 .slider {
-    transition: all 250ms ease-in-out;
+    transition: all 150ms ease-in-out;
     padding: 20px;
     display: flex;
     opacity: 0;
-    transform: translate(-110%, 130%) rotate(-10deg);
+    -webkit-transform: translate3d(-110%, 130%, 0) rotate(-10deg);
+    -moz-transform: translate3d(-110%, 130%, 0) rotate(-10deg);
+    transform: translate3d(-110%, 130%, 0) rotate(-10deg);
     position: absolute;
-    top: 10px;
-    bottom: 10px;
-    left: 10px;
-    right: 10px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     background: #fff;
+    z-index: 3
 }
 
 .slide-open {
   opacity: 1;
-  transform: translate(0%, 0%) !important;
+  -webkit-transform: translate3d(0%, 0%, 0) rotate(0) !important;
+  -moz-transform: translate3d(0%, 0%, 0) rotate(0) !important;
+  transform: translate3d(0%, 0%, 0) rotate(0) !important;
 }
 
 h1 {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 }
 
 h2 {
   font-size: 0.7rem;
-  text-transform: uppercase;
   text-transform: uppercase;
   padding: 0.6rem;
   margin: 0.2rem;
@@ -198,6 +202,35 @@ h2 {
   margin-bottom: 2rem;
   font-size: 0.7rem;
   animation: pulsate ease-in-out 1s infinite alternate;
+}
+
+.HighScore {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #03061d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+  z-index: 5;
+}
+
+.HighScore h1 {
+  border: 2px solid #a04ca6;
+  color: #a54da9;
+  font-weight: normal;
+  padding: 0.8rem;
+}
+
+.inline-thumbnail {
+  display: inline;
+  width: 30px;
+  height: 30px;
+  margin: 1px;
 }
 
 @keyframes pulsate {
