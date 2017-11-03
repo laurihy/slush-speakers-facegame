@@ -8,6 +8,9 @@ import Question from './components/question.js'
 import AnswerCard from './components/answer.js'
 
 
+var ImgixClient = require('imgix-core-js');
+
+
 const getQuestion = function(answers) {
   const selected = _.sampleSize(answers, 4);
   return {
@@ -87,7 +90,7 @@ class App extends Component {
         <Question
           onAnswer={onAnswer}
           answers={this.state.currentQuestion.answers}
-          photoUrl={this.state.currentQuestion.correct.photo}
+          photoUrl={this.state.currentQuestion.correct.photo_with_border}
         ></Question>
 
       </div>
