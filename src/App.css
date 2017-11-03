@@ -1,7 +1,13 @@
+body {
+  background: #03061d;
+}
+
 .AppContainer {
   background: #03061d;
   height: 100%;
   overflow: hidden;
+  position: relative;
+  margin: 0 auto;
 }
 
 .QuestionContainer {
@@ -144,7 +150,7 @@
 }
 
 .slider {
-    transition: all 150ms ease-in-out;
+    transition: all 200ms ease-in-out;
     padding: 20px;
     display: flex;
     opacity: 0;
@@ -236,4 +242,20 @@ h2 {
 @keyframes pulsate {
     0% {transform: scale(1.0);}
     100% {transform: scale(1.15);}
+}
+
+
+
+@media only screen and (min-width: 1024px) {
+  .AppContainer {
+    max-width: 800px;
+  }
+
+  .slider {
+    top: 10px;
+    bottom: 10px;
+    right: 10px;
+    left: 10px;
+    border: 10px solid #a04ca6;
+  }
 }

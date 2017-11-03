@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Transition } from 'react-transition-group';
 import _ from 'lodash';
 import './App.css';
-import speakers from './Speakers17.js';
+import speakers17 from './Speakers17.js';
 
 import Question from './components/question.js'
 import AnswerCard from './components/answer.js'
@@ -21,7 +21,7 @@ class App extends Component {
 
   state = {
     correctAnswers: [],
-    currentQuestion: getQuestion(speakers),
+    currentQuestion: getQuestion(speakers17),
     prevQuestion: {},
     view: 'init'
   }
@@ -44,7 +44,7 @@ class App extends Component {
       // so animating in AnswerCard looks smoother
       setTimeout(function() {
         self.setState({
-          currentQuestion: getQuestion(speakers),
+          currentQuestion: getQuestion(speakers17),
         })
       }, 250)
     }

@@ -1144,3 +1144,5 @@ const speakers17 = [
         "talks": []
     }
 ]
+
+export default speakers17
