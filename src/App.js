@@ -59,7 +59,14 @@ class App extends Component {
             points={self.state.correctAnswers.length}
             wasCorrect={self.state.wasCorrect}
             correct={self.state.prevQuestion.correct || {}}
-            next={() => { self.setState({view: self.state.wasCorrect ? 'question' : 'highscore'})}}
+            next={() => {
+              self.setState({view: self.state.wasCorrect ? 'question' : 'highscore'})
+              setTimeout(function() {
+                self.setState({
+                  prevQuestion: self.state.currentQuestion
+                })
+              }, 250)
+            }}
           ></AnswerCard>
         </div>
 

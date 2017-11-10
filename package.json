@@ -19,5 +19,5 @@
     "eject": "react-scripts eject",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "http://laurihy.github.io/slush16-speakers"
+  "homepage": "http://laurihy.github.io/slush-speakers-facegame"
 }

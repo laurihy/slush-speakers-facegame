@@ -52,7 +52,7 @@ const NextButton = function(props) {
 
 const AnswerCard = function(props) {
   const threshold = _.find(highlightThresholds, {limit: props.points});
-  const message = threshold ?
+  const message = (threshold && props.wasCorrect) ?
                     (<div className="highlight">{threshold.message}</div>) :
                     (<h2>{_.sample(props.wasCorrect ? correctAnswerMessages : wrongAnswerMessages)}</h2>);
   return (
